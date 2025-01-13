@@ -140,9 +140,6 @@ svg {
 .header-menu ul {
   margin-top: 0;
 }
-.logo img {
-  width: 460px;/*remove */
-}
 .l-header .logo {
   margin-inline-end: 1em;
   margin-bottom: 1em;
