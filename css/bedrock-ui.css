@@ -1,0 +1,680 @@
+.field-type-taxonomy-term-reference .field-items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+}
+ul.tabs.primary,
+ul.tabs.secondary {
+  margin: 1em 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5em;
+}
+ul.tabs.primary li,
+ul.tabs.secondary li,
+ul.tabs.primary li a,
+ul.tabs.secondary li a {
+  display: block;
+  text-decoration: none;
+}
+ul.tabs.secondary li a {
+  padding: .2em 1em;
+  background: var(--bedrock-bg-color-secondary);
+}
+ul.tabs.secondary li a.active {
+  background: var(--bedrock-bg-color-highlight);
+}
+ul.tabs.primary li a {
+  display: block;
+  padding: .7em 1.5em;
+  background-color: var(--bedrock-bg-color-secondary);
+}
+ul.tabs.primary li a:hover {
+  background-color: var(--bedrock-bg-color-highlight);
+}
+ul.tabs.primary li a.active {
+  background-color: var(--bedrock-bg-color-highlight);
+  border: none;
+  position: relative;
+}
+ul.tabs.primary li a.active:after {
+  content: '';
+  background: var(--bedrock-link-color);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+}
+/**
+ * Responsive tables.
+ */
+@media screen and (max-width: 450px) {
+  th.priority-low,
+  td.priority-low,
+  th.priority-medium,
+  td.priority-medium {
+    display: none;
+  }
+}
+@media screen and (max-width: 720px) {
+  th.priority-low,
+  td.priority-low {
+    display: none;
+  }
+}
+@media screen and (min-width: 721px) {
+  .tableresponsive-toggle-columns {
+    display: none;
+  }
+}
+/**
+ * Forms.
+ */
+input.form-checkbox,
+input.form-radio {
+  width: 1rem;
+  height: 1rem;
+  vertical-align: baseline;
+  margin: 0 .2em 0 0;/* LTR */
+}
+[dir="rtl"] input.form-checkbox,
+[dir="rtl"] input.form-radio {
+  margin: 0 0 0 .2em;
+}
+.form-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+}
+input.form-submit,
+button.form-submit,
+.form-actions input,
+.form-actions a,
+a.button {
+  display: inline-block;
+  padding: .5em 1.2em;
+  background: var(--bedrock-bg-color-secondary);
+  color: var(--bedrock-text-color);
+  border: 1px solid var(--bedrock-border-color);
+  border-radius: 3px;
+  text-decoration: none;
+  line-height: 1.2 !important;
+}
+input.form-submit:focus-visible,
+.form-actions input:focus-visible {
+  outline: 2px solid var(--bedrock-link-color);
+}
+input.button-primary {
+  background: var(--bedrock-link-color);
+  border-color: var(--bedrock-link-color);
+  color: var(--bedrock-bg-color-highlight);
+}
+a.button:hover,
+.button-primary:hover,
+.button-secondary:hover,
+button:hover,
+input.form-submit:hover {
+  box-shadow: 0 0 0 1px var(--bedrock-border-color);
+}
+a.form-delete,
+a.danger,
+input.button-primary.button-danger {
+  color: var(--bedrock-danger-color);
+  background: var(--bedrock-bg-color);
+  border-color: var(--bedrock-danger-color);
+}
+a.form-cancel {
+  background: var(--bedrock-bg-color);
+  border-color: var(--bedrock-bg-color);
+  padding: .5em 0;
+  text-decoration: underline;
+}
+/**
+ * Fieldset overrides
+ */
+.js fieldset.collapsible {
+  background-color: var(--bedrock-bg-color-highlight);
+}
+.js fieldset.collapsible > legend {
+  padding-inline-start: .9em;
+  width: calc(100% - .9em);
+}
+.js fieldset.collapsible legend a {
+  text-decoration: none;
+  color: var(--bedrock-link-color);
+  display: block;
+}
+.js fieldset.collapsible > legend > .fieldset-legend {
+  display: list-item;
+  list-style-type: disclosure-open;
+}
+.js fieldset.collapsible.collapsed > legend > .fieldset-legend {
+  list-style-type: disclosure-closed;
+}
+.js fieldset .fieldset-wrapper:before {
+  content: '';
+  display: block;
+  margin-top: 1.5em;
+}
+@media (max-width: 62em) {
+  .fieldset-wrapper table,
+  .fieldset-wrapper tbody,
+  .fieldset-wrapper tr,
+  .fieldset-wrapper th,
+  .fieldset-wrapper td {
+    display: block;
+    padding: 0;
+  }
+}
+.admin-panel svg.icon {
+  width: 1.5em;
+  height: 1.5em;
+  vertical-align: sub;
+  margin-right: .3em;/* LTR */
+}
+[dir=rtl] .admin-panel svg.icon {
+  margin-right: 0;
+  margin-left: .3em;
+}
+input.form-autocomplete,
+input.form-text,
+input.form-tel,
+input.form-date,
+input.form-time,
+input.form-email,
+input.form-url,
+input.form-number,
+input.form-search,
+textarea.form-textarea,
+select.form-select {
+  border: 1px solid var(--bedrock-border-color);
+  padding: .3em;
+  font: var(--bedrock-font);
+  color: var(--bedrock-text-color);
+  background-color: var(--bedrock-bg-color-highlight);
+  box-sizing: border-box;
+}
+select.form-select {
+  padding: .46em;
+}
+.form-disabled input.form-autocomplete,
+.form-disabled input.form-text,
+.form-disabled input.form-tel,
+.form-disabled input.form-date,
+.form-disabled input.form-time,
+.form-disabled input.form-email,
+.form-disabled input.form-url,
+.form-disabled input.form-color,
+.form-disabled input.form-number,
+.form-disabled input.form-search,
+.form-disabled input.form-file,
+.form-disabled textarea.form-textarea,
+.form-disabled select.form-select {
+  background-color: var(--bedrock-bg-color);
+}
+.form-item.form-type-link-field .form-item {
+  margin: 0;
+}
+.form-type-file,
+.form-type-managed-file {
+  background: var(--bedrock-bg-color-highlight);
+  padding: .5em 1em;
+  border: 1px solid var(--bedrock-border-color);
+}
+fieldset .form-type-file,
+fieldset .form-type-managed-file {
+  border: none;
+  padding: 0;
+}
+.filter-format-editor-image-form .form-type-managed-file {
+  display: block;
+  background: inherit;
+  border: none;
+  padding: 0;
+}
+/* @see filter.css */
+.filter-wrapper {
+  padding: 1.5em 1em .5em;
+}
+fieldset.collapsible.filter-wrapper legend {
+  top: .3em;
+}
+.filter-wrapper .fieldset-title,
+.filter-wrapper .summary {
+  display: inline-block !important;
+  font-size: 1rem;
+  font-weight: normal;
+}
+/**
+ * @see vertical-tabs.css
+ */
+.vertical-tabs {
+  border-color: var(--bedrock-border-color);
+  background-color: var(--bedrock-bg-color-highlight);
+  position: relative;
+}
+@media (min-width: 750px) {
+  .vertical-tabs:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: calc(15em - 1px);
+    background-color: var(--bedrock-bg-color);
+  }
+  [dir="rtl"] .vertical-tabs:before {
+    left: auto;
+    right: 0;
+  }
+}
+.vertical-tabs-list {
+  position: relative;
+}
+@media (min-width: 750px) {
+  .vertical-tabs-list {
+    margin-left: calc(-1px - 15em);
+  }
+  [dir="rtl"] .vertical-tabs-list {
+    margin-right: calc(-1px - 15em);
+    padding: 0;
+  }
+}
+.vertical-tabs-pane .fieldset-wrapper {
+  max-width: calc(100% - 2.5em);
+}
+.vertical-tabs-list {
+  border-top-color: var(--bedrock-border-color);
+}
+.vertical-tabs-pane {
+  border-bottom-color: var(--bedrock-border-color);
+}
+.vertical-tab-item {
+  background: var(--bedrock-bg-color-secondary);
+  border-color: var(--bedrock-border-color);
+}
+.vertical-tab-link {
+  color: var(--bedrock-link-color);
+  top: 0;
+}
+fieldset legend.vertical-tab-link {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+fieldset legend.vertical-tab-link .summary {
+  font-weight: normal;
+}
+.vertical-tab-selected.vertical-tab-item {
+  background-color: var(--bedrock-bg-color-highlight);
+}
+.vertical-tab-selected strong,
+.vertical-tab-selected .fieldset-legend {
+  color: var(--bedrock-text-color);
+}
+.vertical-tabs-pane > .vertical-tab-link {
+  background: var(--bedrock-bg-color-secondary);
+}
+.vertical-tabs-pane.vertical-tab-selected > .vertical-tab-link {
+  border-bottom-color: var(--bedrock-border-color);
+}
+.vertical-tab-link:hover {
+  outline: none;
+  background-color: var(--bedrock-bg-color-highlight);
+}
+/**
+ * The menu...
+ */
+.block-content ul.menu-dropdown,
+.block-content ul.menu-dropdown ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.block-content ul.menu-dropdown a,
+.block-content ul.menu-dropdown a:hover,
+.block-content ul.menu-dropdown a:focus,
+.block-content ul.menu-dropdown a:active {
+  display: block;
+  padding: .5em 1em;
+  font-size: 1.2rem;
+  text-decoration: none;
+  line-height: 1.3;
+  color: var(--bedrock-text-color);
+}
+html.js .block-content ul.menu-dropdown .has-children > a {
+  padding-right: 1.6em;
+}
+.block-content ul.menu-dropdown ul {
+  border: none;
+  background-color: var(--bedrock-bg-color-secondary);
+}
+.menu-dropdown ul a:hover,
+.menu-dropdown ul a:focus,
+.menu-dropdown ul a:active,
+.menu-dropdown ul a.highlighted {
+  background-color: var(--bedrock-bg-color-highlight);
+}
+/**
+ * Fallback solutions when JS is disabled and hover is available.
+ */
+@media (any-hover: hover) {
+  /* @see js/bedrock.js */
+  body.no-jscript .menu-dropdown li {
+    position: relative;
+    z-index: 2;
+  }
+  body.no-jscript .menu-dropdown ul {
+    display: none;
+    position: absolute;
+    min-width: 15em;
+  }
+  body.no-jscript .menu-dropdown .has-children > a:after {
+    content: '▾';
+    font-size: 1rem;
+    padding-left: .5em;
+  }
+  body.no-jscript .menu-dropdown ul .has-children > a:after {
+    content: '▸';
+    float: right;
+  }
+  body.no-jscript .menu-dropdown .has-children:hover > ul,
+  body.no-jscript .menu-dropdown .has-children > ul:hover {
+    display: block;
+    top: 100%;
+  }
+  body.no-jscript .menu-dropdown ul .has-children:hover > ul,
+  body.no-jscript .menu-dropdown ul .has-children > ul:hover {
+    top: 0;
+    left: 100%;
+  }
+}
+/**
+ * Dialogs.
+ */
+.ui-widget.ui-widget-content {
+  border-color: var(--bedrock-border-color);
+}
+/* @todo only for oxide (light) skin. */
+body .tox .tox-dialog__header,
+body .tox .tox-dialog__footer {
+  background-color: var(--bedrock-bg-color-secondary);
+}
+body .tox .tox-dialog__footer .tox-button {
+  border-radius: 3px;
+  background-color: var(--bedrock-link-color);
+  color: var(--bedrock-bg-color);
+}
+body .tox .tox-dialog__footer .tox-button.tox-button--secondary {
+  background-color: var(--bedrock-bg-color);
+  color: var(--bedrock-text-color);
+}
+body .tox .tox-dialog__footer .tox-button:hover {
+  box-shadow: 0 0 0 1px var(--bedrock-border-color);
+  background-color: var(--bedrock-link-color);
+}
+body .tox .tox-dialog__footer .tox-button.tox-button--secondary {
+  background-color: var(--bedrock-bg-color);
+}
+
+.ui-dialog .ui-dialog-titlebar,
+.ui-dialog .ui-dialog-buttonpane {
+  background: var(--bedrock-bg-color-secondary);
+  border-color: var(--bedrock-border-color);
+}
+.ui-dialog .ui-dialog-buttonpane {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+.ui-widget-content {
+  color: var(--bedrock-text-color);
+}
+.ui-dialog .ui-dialog-content {
+  background: var(--bedrock-bg-color);
+  color: var(--bedrock-text-color);
+}
+.admin-bar .ui-dialog .ui-dialog-content {
+  max-height: 74vh !important;
+}
+.ui-widget-content a {
+  color: var(--bedrock-link-color);
+}
+.ui-widget-content .pager a {
+  color: var(--bedrock-bg-color-highlight);
+}
+.ui-widget-header {
+  color: var(--bedrock-text-color);
+}
+.ui-widget-header button,
+.ui-dialog-buttonset button {
+  background: var(--bedrock-bg-color);
+}
+.ui-state-hover,
+.ui-widget-content .ui-state-hover,
+.ui-widget-header .ui-state-hover,
+.ui-state-focus,
+.ui-widget-content .ui-state-focus,
+.ui-widget-header .ui-state-focus,
+.ui-button:hover,
+.ui-button:focus {
+  border-color: var(--bedrock-border-color);
+  background: var(--bedrock-bg-color);
+  color: var(--bedrock-text-color);
+}
+.ui-dialog .ui-dialog-titlebar-close,
+.ui-dialog .ui-dialog-titlebar-close:hover {
+  width: 20px;
+  height: 20px;
+  right: .6em;
+  background: var(--bedrock-bg-color-secondary);
+  box-shadow: none;
+}
+.ui-dialog .ui-dialog-titlebar-close .ui-icon {
+  background: var(--bedrock-text-color);
+  mask-image: var(--icon-x);
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-size: 26px;
+  width: 20px;
+  height: 20px;
+  margin: -10px 0 0 -10px;
+}
+.view-image-library .view-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+  margin: 1em 0 0;
+}
+.editor-image-library {
+  padding: 0 0 0 1em;
+  margin: -0.5em -1em -0.5em 1em;
+  background: var(--bedrock-bg-color-highlight);
+  min-width: 422px;
+}
+@media (max-width: 1030px) {
+  .editor-image-fields {
+    padding-top: 0;
+  }
+}
+.image-library-choose-file {
+  width: 124px;
+  height: 120px;
+  float: none;
+  margin: 0;
+  padding: 5px 0 0;
+  border: none;
+  background: var(--bedrock-bg-color);
+  border-radius: 0;
+  line-height: 100px;
+  text-align: center;
+}
+.image-library-choose-file:hover {
+  border: none;
+  border-radius: 0;
+  background: var(--bedrock-bg-color-secondary);
+}
+.image-library-choose-file.image-library-image-selected {
+  border: none;
+  background: var(--bedrock-bg-color-secondary);
+  outline: 3px solid var(--bedrock-link-color);
+}
+.image-library-choose-file .image-library-image {
+  display: inline;
+  position: static;
+  vertical-align: middle;
+  background-color: inherit;
+  box-shadow: none;
+}
+.image-library-filename {
+  line-height: 1;
+  font-size: .85rem;
+  position: static;
+  margin: 0 3px 3px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.progress .bar {
+  background: var(--bedrock-bg-color-highlight);
+}
+.progress .filled {
+  background: var(--bedrock-link-color);
+}
+.admin-panel {
+  padding: .5em 1em;
+  background: #fff;
+  margin-bottom: 1em;
+  border: 1px solid var(--bedrock-border-color);
+}
+.menu-tree li a.active {
+  color: var(--bedrock-text-color);
+}
+.menu-tree li ul {
+  margin-top: .2em;
+  margin-bottom: .2em;
+  padding-inline-start: 1em;
+}
+body.node-preview-page {
+  padding-bottom: 10em;
+}
+.node-preview-container {
+  background: var(--bedrock-bg-color-highlight);
+  padding: 1em 0;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  z-index: 1001;
+  box-shadow: 0 0 12px #0004;
+  border-top: 1px solid var(--bedrock-border-color);
+}
+form.node-preview-banner-form {
+  display: table;
+  margin: 0 auto;
+}
+.node-preview-backlink {
+  white-space: nowrap;
+}
+.node-preview-save-button {
+  margin: 0 1em .2em 0;
+}
+div.node-preview-banner-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+  padding: 0 1em;
+}
+@media (min-width: 48em) {
+  body.node-preview-page {
+    padding-bottom: 6em;
+  }
+}
+@media (min-width: 75em) {
+  body.node-preview-page {
+    padding-bottom: 7em;
+  }
+  .node-preview-container {
+    padding: 2em 0;
+  }
+}
+.js .dropbutton-widget {
+  background-color: var(--bedrock-bg-color-highlight);
+  border-color: var(--bedrock-border-color);
+}
+.dropbutton-arrow {
+  border-top-color: var(--bedrock-text-color);
+}
+.js .dropbutton button:hover,
+.js .dropbutton a:hover,
+.js .dropbutton button:focus,
+.js .dropbutton a:focus {
+  background-color: var(--bedrock-bg-color-secondary);
+  border-color: var(--bedrock-border-color);
+}
+.dropbutton-multiple .dropbutton {
+  border-color: var(--bedrock-border-color) !important;
+}
+.dropbutton-multiple.open .dropbutton-arrow {
+  border-bottom-color: var(--bedrock-text-color);
+}
+.js .dropbutton-widget:hover,
+.js .dropbutton li, .js .dropbutton a {
+  border-color: var(--bedrock-border-color);
+}
+.js .dropbutton-widget:focus-within {
+  outline: 2px solid var(--bedrock-link-color);
+}
+.dropbutton-widget,
+.dropbutton-widget * {
+  border-radius: 0 !important;
+}
+/**
+ * Special-cased stuff, only partly fixed, but too much effort.
+ */
+#system-modules .table-filter,
+.installer-browser .installer-browser-block,
+.layout-editor-region {
+  background-color: var(--bedrock-bg-color-highlight);
+  border-color: var(--bedrock-border-color);
+}
+.installer-browser .installer-browser-block h2,
+.layout-list .layout-group td,
+.edit-layout-top {
+  background-color: var(--bedrock-bg-color-secondary);
+  color: var(--bedrock-text-color);
+}
+.layout-editor-region-title .label {
+  color: var(--bedrock-text-color);
+}
+.layout-editor-block-title {
+  background-color: var(--bedrock-bg-color-secondary);
+}
+.layout-editor-block,
+.layout-editor-block-content {
+  background-color: var(--bedrock-bg-color);
+  border-color: var(--bedrock-border-color);
+  box-shadow: none;
+}
+.layout-flexible-editor .flexible-row {
+  box-shadow: none;
+}
+.layout-flexible-editor .flexible-row:hover {
+  background-color: var(--bedrock-bg-color-highlight);
+}
+.views-admin #edit-display-settings-main {
+  background-color: var(--bedrock-bg-color-highlight);
+}
+.views-ui-dialog #views-ajax-title,
+.views-ui-dialog .views-override,
+.views-admin #edit-display-settings-top,
+.views-ui-display-tab-bucket h3 {
+  background-color: var(--bedrock-bg-color-secondary);
+  color: var(--bedrock-text-color);
+}
+.viewsDialog-processed #edit-options .collapsible {
+  width: auto;
+  float: none;
+}
+.user-login-block .form-text {
+  width: 20em;
+}

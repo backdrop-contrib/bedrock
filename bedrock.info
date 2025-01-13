@@ -1,0 +1,11 @@
+name = Bedrock
+description = A base theme that styles a lot, but doesn't design anything.
+type = theme
+backdrop = 1.x
+dependencies[] = system (>= 1.28.0)
+
+stylesheets[all][] = css/system.theme.css
+stylesheets[all][] = css/base.css
+stylesheets[all][] = css/bedrock-ui.css
+
+scripts[] = js/bedrock.js

@@ -1,0 +1,564 @@
+/** Base color scheme */
+:root {
+  --bedrock-font: 1rem/1.5 sans-serif;
+  --bedrock-text-color: #444;
+  --bedrock-link-color: #116e9b;
+  --bedrock-bg-color: #fafafa;
+  --bedrock-bg-color-highlight: #fff;
+  --bedrock-bg-color-secondary: #f0f0f0;
+  --bedrock-border-color: #bbb;
+  --bedrock-danger-color: #c10000;
+}
+body {
+  font: var(--bedrock-font);
+  color: var(--bedrock-text-color);
+  background: var(--bedrock-bg-color);
+}
+.layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+html.admin-bar .layout {
+  min-height: calc(100vh - var(--admin-bar-height));
+}
+.l-wrapper {
+  flex-grow: 1;
+}
+.l-footer {
+  margin-top: auto;
+}
+a {
+  color: var(--bedrock-link-color);
+}
+a:focus-visible,
+button:focus-visible,
+[type="button"]:focus-visible,
+[type="reset"]:focus-visible,
+[type="submit"]:focus-visible {
+  outline: 2px solid var(--bedrock-link-color);
+}
+input:focus,
+select:focus,
+textarea:focus {
+  outline: 2px solid var(--bedrock-link-color);
+  box-shadow: none;
+}
+.tox .tox-edit-area::before {
+  border-color: var(--bedrock-link-color) !important;
+}
+p {
+  margin: 1em 0;
+}
+hr {
+  border-width: 0 0 1px 0;
+  border-color: currentColor;
+}
+h1, h2, h3 {
+  line-height: 1.3;
+  margin: 1rem 0;
+}
+h4, h5, h6 {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin: 1em 0;
+}
+ul,
+ol {
+  margin: 1em 0;
+  padding-inline-start: 1.8em;
+}
+li {
+  margin: 0;
+}
+.item-list li {
+  margin: 0;
+  line-height: 1.7;
+}
+.item-list:has(> .pager) {
+  text-align: center;
+}
+.item-list .pager {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: .5em;
+  list-style: none;
+  padding: 0;
+}
+.pager .pager-current,
+.pager a {
+  display: block;
+  padding: .1em .8em;
+  background: var(--bedrock-bg-color-secondary);
+}
+.pager a {
+  background: var(--bedrock-link-color);
+  color: var(--bedrock-bg-color-highlight);
+  text-decoration: none;
+}
+.pager a:hover {
+  box-shadow: 0 0 0 2px var(--bedrock-link-color);
+}
+.menu-toggle-button-icon,
+.menu-toggle-button-icon::before,
+.menu-toggle-button-icon::after {
+  background-color: var(--bedrock-text-color);
+}
+ul.inline,
+ul.links.inline {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+  padding: 0;
+}
+ul.inline li {
+  padding: 0;
+  display: block;
+}
+img,
+video,
+audio,
+iframe,
+table,
+svg {
+  max-width: 100%;
+}
+.l-header {
+  padding-top: 1em;
+}
+.block-system-header .block-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.site-name {
+  font-size: 1.5em;
+  line-height: 1.2;
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+.header-menu ul {
+  margin-top: 0;
+}
+.logo img {
+  width: 460px;/*remove */
+}
+.l-header .logo {
+  margin-inline-end: 1em;
+  margin-bottom: 1em;
+  max-width: 180px;
+}
+@media (min-width: 62em) {
+  .l-header .logo {
+    max-width: 280px;
+  }
+}
+.l-header .name-and-slogan {
+  margin-inline-end: auto;
+}
+.views-table {
+  border-collapse: collapse;
+  max-width: 100%;
+  width: 100%;
+}
+.views-view-grid .views-row,
+.views-view-grid .views-grid-box {
+  border-color: var(--bedrock-border-color);
+}
+pre {
+  max-width: 100%;
+  overflow: auto;
+  background-color: var(--bedrock-bg-color-secondary);
+  padding: .7em .5em;
+}
+img,
+video {
+  height: auto;
+}
+blockquote {
+  margin: 1em 0;
+  padding: .2em 1em;
+  background: var(--bedrock-bg-color-secondary);
+}
+
+/** form stuff (put in other file?) **/
+form,
+button,
+input,
+optgroup,
+select,
+textarea {
+  max-width: 100%;
+}
+.label {
+  font-weight: bold;
+}
+fieldset {
+  border: 1px solid var(--bedrock-border-color);
+  padding: 1.5em 1em 1em;
+  background-color: var(--bedrock-bg-color-highlight);
+  position: relative;
+  /* Browser quirks */
+  min-width: 0;
+}
+fieldset legend {
+  position: absolute;
+  font-size: 1.2em;
+  top: .5em;
+  line-height: 1.1;
+}
+table,
+fieldset,
+details,
+.form-item,
+.form-actions {
+  margin: 1em 0;
+}
+table.sticky-enabled,
+table.sticky-header,
+.admin-page table,
+.views-table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid var(--bedrock-bg-color-secondary);
+}
+thead {
+  background: var(--bedrock-bg-color-secondary);
+}
+th,
+td {
+  padding: .2em .5em;
+}
+@media (min-width: 75em) {
+  th,
+  td {
+    padding: .8em 1em;
+  }
+}
+th {
+  text-align: initial;
+}
+td.active {
+  background: var(--bedrock-bg-color-secondary);
+}
+table.sticky-enabled th,
+table.sticky-header td,
+.admin-page table th,
+.admin-page table td {
+  padding: .5em;
+}
+.admin-page table th {
+  background: var(--bedrock-bg-color-secondary);
+}
+tr.even,
+tr.odd {
+  border-bottom: 1px solid var(--bedrock-border-color);
+}
+tr.even {
+  background: var(--bedrock-bg-color);
+}
+tr.odd {
+  background: var(--bedrock-bg-color-highlight);
+}
+tr.odd .form-item,
+tr.even .form-item {
+  white-space: normal;
+}
+.tabledrag-toggle-weight-wrapper + table,
+.tabledrag-changed-warning + table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.tabledrag-toggle-weight-wrapper + table th,
+.tabledrag-toggle-weight-wrapper + table td,
+.tabledrag-changed-warning + table th,
+.tabledrag-changed-warning + table td {
+  padding: .5em;
+}
+tr.draggable td,
+tr.tabledrag-leaf td {
+  padding: .7em .5em;
+}
+tr.draggable td:first-child,
+tr.tabledrag-leaf td:first-child {
+  position: relative;
+  padding-left: 3em;/* LTR */
+}
+[dir="rtl"] tr.draggable td:first-child,
+[dir="rtl"] tr.tabledrag-leaf td:first-child {
+  padding-left: .5em;
+  padding-right: 3em;
+}
+a.tabledrag-handle .handle,
+[dir="rtl"] a.tabledrag-handle .handle {
+  margin: 0;
+  padding: 0;
+  width: 2em;
+  height: 2em;
+  background: var(--bedrock-text-color);
+  mask-image: var(--icon-arrows-out-cardinal);
+  mask-size: 1.75em;
+  mask-repeat: no-repeat;
+  mask-position: center;
+}
+tr.drag a.tabledrag-handle .handle {
+  background-color: var(--bedrock-link-color);
+}
+.draggable a.tabledrag-handle {
+  margin: -0.25em 0 0 -2.5em;/* LTR */
+  height: 100%;
+}
+[dir="rtl"] .draggable a.tabledrag-handle {
+  margin: -0.25em -2.5em 0 0;
+}
+abbr.tabledrag-changed {
+  position: absolute;
+  top: 0;
+  left: 0; /* LTR */
+  display: block;
+  width: 5px;
+  height: 100%;
+  text-indent: -9999em;
+  z-index: 0;
+  background: #fce400;
+}
+[dir="rtl"] abbr.tabledrag-changed {
+  left: auto;
+  right: 0;
+}
+.draggable .form-managed-file .image-preview {
+  padding-bottom: 0;
+}
+.draggable .form-managed-file .image-preview img {
+  vertical-align: middle;
+}
+.messages ul {
+  padding: 0 0 0 .7em;/* LTR */
+}
+[dir="rtl"] .messages ul {
+  padding: 0 .7em 0 0;
+}
+.search-block-form > div {
+  display: flex;
+}
+/**
+ * Other stuff...
+ */
+.tox-tinymce {
+  border-radius: 0 !important;
+  border: 1px solid var(--bedrock-border-color) !important;
+}
+.breadcrumb ol {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.breadcrumb {
+  padding: .5em 0;
+}
+.breadcrumb ol li {
+  background-color: var(--bedrock-bg-color-secondary);
+  padding: .3em 1.5em;
+  clip-path: polygon(0 0, 10px 50%, 0 100%, calc(100% - 10px) 100%, 100% 50%, calc(100% - 10px) 0);
+}
+.breadcrumb ol li:first-child {
+  padding-inline-start: 1em;
+  clip-path: polygon(0 0, 0 100%, calc(100% - 10px) 100%, 100% 50%, calc(100% - 10px) 0);
+}
+[dir="rtl"] .breadcrumb ol li {
+  clip-path: polygon(10px 0, 0 50%, 10px 100%, 100% 100%, calc(100% - 10px) 50%, 100% 0);
+}
+[dir="rtl"] .breadcrumb ol li:first-child {
+  clip-path: polygon(10px 0, 0 50%, 10px 100%, 100% 100%, 100% 0);
+}
+p.submitted,
+.form-item .description {
+  font-size: .875em;
+}
+details {
+  background: var(--bedrock-bg-color-highlight);
+  border: 1px solid var(--bedrock-border-color);
+  padding: .3em 1em;
+}
+.unpublished {
+  background-color: inherit;
+}
+.unpublished-indicator {
+  background: var(--bedrock-bg-color-secondary);
+  color: var(--bedrock-danger-color);
+  padding: .5em;
+}
+svg.icon {
+  max-width: 100px;
+}
+svg.icon-bedrock {
+  vertical-align: bottom;
+}
+/* Prevent views style clash. */
+.views-admin .icon-bedrock {
+  background: inherit;
+  width: initial;
+  height: initial;
+}
+/** overrides (put in other file?) **/
+/* @see system.theme.css ... *sigh* and system.css */
+figure {
+  margin: 1em 0;
+}
+figure img {
+  vertical-align: text-top;
+}
+.caption > * {
+  border: none;
+}
+.caption > figcaption {
+  background-color: inherit;
+  border: none;
+  font-size: .875em;
+  padding: .5em 0;
+}
+img.align-left,
+img.align-right,
+figure.align-left,
+figure.align-right {
+  float: none;
+  margin: 1em auto;
+  display: block;
+}
+img.align-left,
+img.align-right {
+  display: block;
+}
+figure.align-left,
+figure.align-right,
+figure.align-center {
+  display: table;
+}
+@media (min-width: 48em) {
+  figure.align-left {
+    float: left;
+    margin: 0 2em 1em 0;
+  }
+  figure.align-right {
+    float: right;
+    margin: 0 0 1em 2em;
+  }
+  img.align-left {
+    float: left;
+    margin: .3em 2em .5em 0;
+  }
+  img.align-right {
+    float: right;
+    margin: .3em 0 .5em 2em;
+  }
+  .mce-content-body img[data-align="left"] {
+    margin-right: 2em;
+  }
+  .mce-content-body img[data-align="right"] {
+    margin-left: 2em;
+  }
+  .mce-content-body figure img[data-align="left"],
+  .mce-content-body figure img[data-align="right"] {
+    margin: 0;
+  }
+}
+.maintenance-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 85vh;
+}
+.maintenance-page .l-container {
+  background-color: var(--bedrock-bg-color-highlight);
+  padding: 2rem 2rem 3rem;
+  box-shadow: 0 0 15px #0003;
+}
+.maintenance-page header img,
+.user-simplified-page-logo img {
+  max-height: 200px;
+}
+.user-simplified-page-body {
+  padding: 0;
+}
+.user-simplified-page-wrapper {
+  background-color: var(--bedrock-bg-color-highlight);
+}
+/** Comments */
+article.comment {
+  padding: 1rem;
+  background-color: var(--bedrock-bg-color-secondary);
+  margin-bottom: 1.5rem;
+}
+article.comment-unpublished footer,
+article.comment-unpublished footer a {
+  color: var(--bedrock-danger-color);
+}
+article.comment footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.indented,
+[dir="rtl"] .indented {
+  margin-left: 0;
+  margin-right: 0;
+  padding-inline-start: 2rem;
+}
+.indent-icon {
+  width: 2rem;
+  margin-inline-start: -2rem;
+  margin-top: 1rem;
+  line-height: 2rem;
+  float: inline-start;
+}
+.permalink .icon {
+  width: 1.5em;
+}
+/** Some special element styles. */
+@media (min-width: 62em) {
+  .block-hero {
+    padding: 4vw;
+    font-size: 1.6em;
+  }
+  .block-hero .contextual-links-wrapper {
+    font-size: initial;
+  }
+}
+.view-promoted-cards {
+  padding: 0;
+}
+@media (max-width: 769px) {
+  .view-promoted-cards .views-view-grid {
+    grid-template-columns: none;
+  }
+}
+/** Only if Bedrock is the default theme, not a base theme */
+.bedrock-no-subtheme .view-promoted-cards .views-view-grid {
+  gap: 1.5em;
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+}
+.bedrock-no-subtheme .view-promoted-cards .views-grid-box {
+  background-color: var(--bedrock-bg-color-highlight);
+}
+.bedrock-no-subtheme.front .block-hero {
+  position: relative;
+}
+.bedrock-no-subtheme.front .block-hero::before {
+  content: "";
+  background-color: var(--bedrock-bg-color-secondary);
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+  left: calc((100vw - 100%) * -1 / 2);
+  right: calc((100vw - 100%) * -1 / 2);
+}
+.bedrock-no-subtheme .l-footer {
+  padding: 1.5em 0;
+  margin-top: 1.5em;
+  background-color: var(--bedrock-bg-color-secondary);
+}
