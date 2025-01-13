@@ -397,10 +397,13 @@ html.js .block-content ul.menu-dropdown .has-children > a {
 .ui-widget.ui-widget-content {
   border-color: var(--bedrock-border-color);
 }
-/* @todo only for oxide (light) skin. */
 body .tox .tox-dialog__header,
 body .tox .tox-dialog__footer {
   background-color: var(--bedrock-bg-color-secondary);
+  color: var(--bedrock-text-color);
+}
+body .tox .tox-dialog .tox-icon {
+  color: var(--bedrock-text-color);
 }
 body .tox .tox-dialog__footer .tox-button {
   border-radius: 3px;
@@ -418,7 +421,23 @@ body .tox .tox-dialog__footer .tox-button:hover {
 body .tox .tox-dialog__footer .tox-button.tox-button--secondary {
   background-color: var(--bedrock-bg-color);
 }
-
+body .tox .tox-dialog__body,
+body .tox .tox-selectfield select,
+body .tox .tox-selectfield select:focus,
+body .tox .tox-selectfield * {
+  color: var(--bedrock-text-color);
+  background-color: var(--bedrock-bg-color);
+}
+body .tox .tox-dialog__body-content svg {
+  fill: var(--bedrock-text-color);
+}
+body .tox .tox-listboxfield .tox-listbox--select,
+body .tox .tox-textarea,
+body .tox .tox-textarea-wrap .tox-textarea:focus,
+body .tox .tox-textfield, .tox .tox-toolbar-textfield {
+  color: var(--bedrock-text-color);
+  background-color: var(--bedrock-bg-color-highlight);
+}
 .ui-dialog .ui-dialog-titlebar,
 .ui-dialog .ui-dialog-buttonpane {
   background: var(--bedrock-bg-color-secondary);
