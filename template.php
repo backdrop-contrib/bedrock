@@ -181,3 +181,27 @@ function bedrock_breadcrumb($variables) {
   }
   return $output;
 }
+
+/**
+ * Overrides theme_tablesort_indicator().
+ */
+function bedrock_tablesort_indicator($variables) {
+  if ($variables['style'] == 'asc') {
+    $icon = 'caret-down-fill';
+    $alt = t('sort ascending');
+  }
+  else {
+    $icon = 'caret-up-fill';
+    $alt = t('sort descending');
+  }
+
+  $options = array(
+    'alt' => $alt,
+    'attributes' => array(
+      'width' => 16,
+      'height' => 16,
+    ),
+  );
+
+  return icon($icon, $options);
+}

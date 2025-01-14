@@ -211,6 +211,12 @@ details,
 .form-actions {
   margin: 1em 0;
 }
+table {
+  border-collapse: collapse;
+}
+table, th, td {
+  border-color: var(--bedrock-border-color);
+}
 table.sticky-enabled,
 table.sticky-header,
 .admin-page table,
@@ -234,9 +240,14 @@ td {
 }
 th {
   text-align: initial;
+  vertical-align: baseline;
+  background-color: var(--bedrock-bg-color-secondary);
 }
 td.active {
-  background: var(--bedrock-bg-color-secondary);
+  background-color: var(--bedrock-bg-color-secondary);
+}
+th.active {
+  background-color: var(--bedrock-bg-color-highlight);
 }
 table.sticky-enabled th,
 table.sticky-header td,
@@ -245,7 +256,8 @@ table.sticky-header td,
   padding: .5em;
 }
 .admin-page table th {
-  background: var(--bedrock-bg-color-secondary);
+  border-bottom: 1px solid var(--bedrock-bg-color-secondary);
+  border-top: 1px solid var(--bedrock-bg-color-secondary);
 }
 tr.even,
 tr.odd {
