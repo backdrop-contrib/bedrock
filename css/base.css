@@ -176,6 +176,7 @@ blockquote {
   margin: 1em 0;
   padding: .2em 1em;
   background: var(--bedrock-bg-color-secondary);
+  border-inline-start: 4px solid var(--bedrock-border-color);
 }
 
 /** form stuff (put in other file?) **/
@@ -360,6 +361,7 @@ abbr.tabledrag-changed {
 .breadcrumb ol {
   display: flex;
   flex-wrap: wrap;
+  row-gap: .5em;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -369,7 +371,7 @@ abbr.tabledrag-changed {
 }
 .breadcrumb ol li {
   background-color: var(--bedrock-bg-color-secondary);
-  padding: .3em 1.5em;
+  padding: .2em 1.5em;
   clip-path: polygon(0 0, 10px 50%, 0 100%, calc(100% - 10px) 100%, 100% 50%, calc(100% - 10px) 0);
 }
 .breadcrumb ol li:first-child {
