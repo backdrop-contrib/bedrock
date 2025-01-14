@@ -160,13 +160,8 @@ a.form-cancel {
   margin-top: 1.5em;
 }
 @media (max-width: 62em) {
-  .fieldset-wrapper table,
-  .fieldset-wrapper tbody,
-  .fieldset-wrapper tr,
-  .fieldset-wrapper th,
-  .fieldset-wrapper td {
-    display: block;
-    padding: 0;
+  .fieldset-wrapper {
+    overflow-x: auto;
   }
 }
 .admin-panel svg.icon {
