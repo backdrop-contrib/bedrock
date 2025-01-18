@@ -342,11 +342,12 @@ abbr.tabledrag-changed {
 .draggable .form-managed-file .image-preview img {
   vertical-align: middle;
 }
-.messages ul {
-  padding: 0 0 0 .7em;/* LTR */
+.messages {
+  margin: 0 0 1rem;
 }
-[dir="rtl"] .messages ul {
-  padding: 0 .7em 0 0;
+.messages ul {
+  padding: 0;
+  padding-inline-start: .7em;
 }
 .search-block-form > div {
   display: flex;
