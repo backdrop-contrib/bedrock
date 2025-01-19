@@ -357,6 +357,19 @@ html.js .block-content ul.menu-dropdown .has-children > a {
   background-color: var(--bedrock-bg-color-highlight);
 }
 /**
+ * Smartmenus: we can fix the arrow colors, but we can not fix the RTL mess.
+ */
+.menu-dropdown a.has-submenu .sub-arrow,
+[dir="rtl"] .menu-dropdown a.has-submenu .sub-arrow {
+  border-color: transparent;
+  border-top-color: currentColor;
+}
+.menu-dropdown ul a.has-submenu span.sub-arrow,
+[dir="rtl"] .menu-dropdown ul a.has-submenu .sub-arrow {
+  border-color: transparent;
+  border-left-color: currentColor;
+}
+/**
  * Fallback solutions when JS is disabled and hover is available.
  */
 @media (any-hover: hover) {
