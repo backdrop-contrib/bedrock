@@ -3,6 +3,7 @@
   --bedrock-font: 1rem/1.5 sans-serif;
   --bedrock-text-color: #444;
   --bedrock-link-color: #116e9b;
+  --bedrock-focus-halo-color: #539fc4;
   --bedrock-bg-color: #fafafa;
   --bedrock-bg-color-highlight: #fff;
   --bedrock-bg-color-secondary: #f0f0f0;
@@ -36,16 +37,16 @@ button:focus-visible,
 [type="button"]:focus-visible,
 [type="reset"]:focus-visible,
 [type="submit"]:focus-visible {
-  outline: 2px solid var(--bedrock-link-color);
+  outline: 2px solid var(--bedrock-focus-halo-color);
 }
 input:focus,
 select:focus,
 textarea:focus {
-  outline: 2px solid var(--bedrock-link-color);
+  outline: 2px solid var(--bedrock-focus-halo-color);
   box-shadow: none;
 }
 .tox .tox-edit-area::before {
-  border-color: var(--bedrock-link-color) !important;
+  border-color: var(--bedrock-focus-halo-color) !important;
 }
 p {
   margin: 1em 0;

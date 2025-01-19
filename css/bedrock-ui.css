@@ -105,7 +105,7 @@ a.button {
 }
 input.form-submit:focus-visible,
 .form-actions input:focus-visible {
-  outline: 2px solid var(--bedrock-link-color);
+  outline: 2px solid var(--bedrock-focus-halo-color);
 }
 input.button-primary {
   background: var(--bedrock-link-color);
@@ -532,7 +532,7 @@ body .tox .tox-textfield, .tox .tox-toolbar-textfield {
 .image-library-choose-file.image-library-image-selected {
   border: none;
   background: var(--bedrock-bg-color-secondary);
-  outline: 3px solid var(--bedrock-link-color);
+  outline: 3px solid var(--bedrock-focus-halo-color);
 }
 .image-library-choose-file .image-library-image {
   display: inline;
@@ -636,7 +636,7 @@ div.node-preview-banner-form {
   border-color: var(--bedrock-border-color);
 }
 .js .dropbutton-widget:focus-within {
-  outline: 2px solid var(--bedrock-link-color);
+  outline: 2px solid var(--bedrock-focus-halo-color);
 }
 .dropbutton-widget,
 .dropbutton-widget * {
