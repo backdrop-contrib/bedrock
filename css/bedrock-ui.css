@@ -279,7 +279,11 @@ fieldset.collapsible.filter-wrapper legend {
   }
 }
 .vertical-tabs-pane .fieldset-wrapper {
+  display: none;
   max-width: calc(100% - 2.5em);
+}
+.vertical-tab-selected .fieldset-wrapper {
+  display: block;
 }
 .vertical-tabs-list {
   border-top-color: var(--bedrock-border-color);
