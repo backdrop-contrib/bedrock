@@ -503,6 +503,7 @@ article.comment {
   padding: 1rem;
   background-color: var(--bedrock-bg-color-secondary);
   margin-bottom: 1.5rem;
+  position: relative;
 }
 article.comment-unpublished footer,
 article.comment-unpublished footer a {
@@ -525,6 +526,14 @@ article.comment footer {
   margin-top: 1rem;
   line-height: 2rem;
   float: inline-start;
+}
+.comment-title {
+  margin-top: 0;
+}
+.comment footer .permalink {
+  position: absolute;
+  top: 1rem;
+  inset-inline-end: 1rem;
 }
 .permalink .icon {
   width: 1.5em;
