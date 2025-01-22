@@ -107,6 +107,7 @@ function bedrock_preprocess_node(&$variables) {
  */
 function bedrock_css_alter(&$css) {
   unset($css['core/modules/node/css/node.preview.css']);
+  unset($css['core/modules/system/css/system.theme.css']);
 }
 
 /**
