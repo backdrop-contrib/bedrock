@@ -350,6 +350,10 @@ abbr.tabledrag-changed {
   padding: 0;
   padding-inline-start: .7em;
 }
+.messages.status pre {
+  background-color: inherit;
+  border: 1px dotted;
+}
 .search-block-form > div {
   display: flex;
 }
