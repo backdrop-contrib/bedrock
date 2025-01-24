@@ -361,6 +361,9 @@ abbr.tabledrag-changed {
 /**
  * Other stuff...
  */
+.form-type-textarea .ck.ck-editor__main > .ck-editor__editable {
+  background-color: var(--bedrock-bg-color);
+}
 .tox-tinymce {
   border-radius: 0 !important;
   border: 1px solid var(--bedrock-border-color) !important;
