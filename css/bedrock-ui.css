@@ -441,6 +441,10 @@ body .tox .tox-selectfield * {
   color: var(--bedrock-text-color);
   background-color: var(--bedrock-bg-color);
 }
+body .tox .tox-selectfield select:focus {
+  border-color: var(--bedrock-focus-halo-color);
+  box-shadow: none;
+}
 body .tox .tox-dialog__body-content svg {
   fill: var(--bedrock-text-color);
 }
@@ -450,6 +454,10 @@ body .tox .tox-textarea-wrap .tox-textarea:focus,
 body .tox .tox-textfield, .tox .tox-toolbar-textfield {
   color: var(--bedrock-text-color);
   background-color: var(--bedrock-bg-color-highlight);
+}
+.tox .tox-form .tox-label,
+.tox .tox-form .tox-toolbar-label {
+  color: var(--bedrock-text-color);
 }
 .ui-dialog .ui-dialog-titlebar,
 .ui-dialog .ui-dialog-buttonpane {
