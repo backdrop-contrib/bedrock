@@ -170,6 +170,18 @@ input.form-autocomplete.throbbing + .bedrock-autocomplete-throbber {
   background-color: var(--bedrock-link-color);
   mask-position: bottom;
 }
+.ajax-progress-throbber .throbber {
+  padding: 0;
+  width: 1em;
+  height: 1em;
+  display: inline-block;
+  vertical-align: middle;
+  background: var(--bedrock-link-color);
+  mask-image: url("../img/throbber.svg");
+  mask-repeat: no-repeat;
+  mask-position: bottom;
+  mask-size: 1em;
+}
 /**
  * Collapsible fieldsets.
  *
