@@ -1,0 +1,7 @@
+<svg width="16" height="40" version="1.1" viewBox="0 0 16 40" xmlns="http://www.w3.org/2000/svg">
+  <path d="m8 0a8 8 0 00-8 8 8 8 0 008 8 8 8 0 008-8 8 8 0 00-8-8zm0 3a5 5 0 015 5 5 5 0 01-5 5 5 5 0 01-5-5 5 5 0 015-5z"/>
+  <g>
+    <path d="m8 24a8 8 0 00-8 8 8 8 0 008 8 8 8 0 005.6562-2.3438l-2.1211-2.1211a5 5 0 01-3.5352 1.4648 5 5 0 01-5-5 5 5 0 015-5 5 5 0 013.5352 1.4648l2.1211-2.1211a8 8 0 00-5.6562-2.3438z"/>
+    <animateTransform attributeName="transform" attributeType="XML" type="rotate" values="0 8 32;360 8 32" dur="1s" repeatCount="indefinite" />
+  </g>
+</svg>

@@ -137,16 +137,39 @@ abbr.ajax-changed {
  * @see autocomplete.js
  */
 /* Suggestion list */
+#autocomplete {
+  border-color: var(--bedrock-border-color);
+}
 #autocomplete ul {
   background: var(--bedrock-bg-color-secondary);
 }
-#autocomplete li {
+#autocomplete ul li {
   padding: .3em;
+  color: var(--bedrock-text-color);
 }
 #autocomplete li.selected {
   background: var(--bedrock-bg-color-highlight);
 }
-
+/* Overrides style from system.css */
+.js input.form-autocomplete {
+  background-image: none;
+  margin-inline-end: 0;
+}
+/* @see Backdrop.behaviors.bedrock */
+input.form-autocomplete + .bedrock-autocomplete-throbber {
+  width: 1em;
+  height: 1em;
+  display: inline-block;
+  margin-inline-start: -1.2em;
+  background-color: var(--bedrock-border-color);
+  mask-image: url("../img/throbber.svg");
+  mask-repeat: no-repeat;
+  mask-size: 1em;
+}
+input.form-autocomplete.throbbing + .bedrock-autocomplete-throbber {
+  background-color: var(--bedrock-link-color);
+  mask-position: bottom;
+}
 /**
  * Collapsible fieldsets.
  *
