@@ -478,6 +478,12 @@ body .tox .tox-textfield, .tox .tox-toolbar-textfield {
 .admin-bar .ui-dialog .ui-dialog-content {
   max-height: 74vh !important;
 }
+#admin-bar-search-items {
+  font: inherit;
+}
+#admin-bar .top-level .admin-bar-search .form-item {
+  padding-top: .25em;
+}
 .ui-widget-content a {
   color: var(--bedrock-link-color);
 }
