@@ -357,6 +357,22 @@ abbr.tabledrag-changed {
 }
 .search-block-form > div {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: end;
+  align-items: last baseline;
+  max-width: 24em;
+  gap: 4px 0;
+}
+.search-block-form .form-item,
+.search-block-form .form-actions {
+  margin: 0;
+}
+.search-block-form .form-item {
+  flex-grow: 1;
+}
+.search-block-form .form-search {
+  width: 100%;
+  min-width: 7em;
 }
 /**
  * Other stuff...
