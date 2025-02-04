@@ -374,6 +374,9 @@ abbr.tabledrag-changed {
   width: 100%;
   min-width: 7em;
 }
+.search-block-form .form-actions input {
+  padding-inline: .5em;
+}
 /**
  * Other stuff...
  */
