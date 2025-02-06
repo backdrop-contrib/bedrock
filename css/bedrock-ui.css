@@ -128,7 +128,7 @@ input.button-primary.button-danger {
   border-color: var(--bedrock-danger-color);
 }
 a.form-cancel {
-  background: var(--bedrock-bg-color);
+  background: transparent;
   border-color: var(--bedrock-bg-color);
   padding: .5em 0;
   text-decoration: underline;
