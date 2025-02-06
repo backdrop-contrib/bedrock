@@ -152,6 +152,10 @@ svg {
     max-width: 280px;
   }
 }
+.l-header .logo img {
+  max-height: 140px;
+  vertical-align: bottom;
+}
 .l-header .name-and-slogan {
   margin-inline-end: auto;
 }
