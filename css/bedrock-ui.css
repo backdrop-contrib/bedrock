@@ -415,6 +415,18 @@ body .tox .tox-dialog__footer {
   background-color: var(--bedrock-bg-color-secondary);
   color: var(--bedrock-text-color);
 }
+body .tox .tox-dialog__header {
+  border-bottom: 1px solid var(--bedrock-border-color);
+}
+body .tox .tox-dialog__footer {
+  border-top: 1px solid var(--bedrock-border-color);
+}
+body .tox .tox-dialog__title {
+  font-family: var(--bedrock-font);
+  font-weight: bold;
+  font-size: 1rem;
+  margin-bottom: .3em;
+}
 body .tox .tox-dialog .tox-icon {
   color: var(--bedrock-text-color);
 }
