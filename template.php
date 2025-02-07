@@ -151,6 +151,12 @@ function bedrock_comment_view_alter(&$build) {
       $build['#suffix'] = str_repeat('</div>', $comment->divs_final);
     }
   }
+
+  // It makes no sense to display "Login to post comments" on every single
+  // comment.
+  if (!empty($build['links']['comment']['#links'])) {
+    unset($build['links']['comment']['#links']['comment-forbidden']);
+  }
 }
 
 /**
