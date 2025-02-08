@@ -188,7 +188,6 @@ input.form-autocomplete.throbbing + .bedrock-autocomplete-throbber {
  * @see collapse.js
  */
 .fieldset-legend span.summary {
-  font-size: 0.85em;
   line-height: 1.4;
   margin: 0 0.5em;
   float: inline-end;
