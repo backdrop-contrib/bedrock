@@ -74,6 +74,11 @@ ul.tabs.primary li a.active:after {
 /**
  * Forms.
  */
+button,
+input,
+optgroup {
+  font: var(--bedrock-font);
+}
 input.form-checkbox,
 input.form-radio {
   width: 1rem;
