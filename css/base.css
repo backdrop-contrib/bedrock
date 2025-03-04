@@ -382,6 +382,12 @@ abbr.tabledrag-changed {
 .search-block-form .form-actions input {
   padding-inline: .5em;
 }
+.search-snippet-info {
+  margin-bottom: 2em;
+}
+.search-snippet-info .search-info {
+  font-size: .875em;
+}
 /**
  * Other stuff...
  */
