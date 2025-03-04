@@ -95,6 +95,7 @@ input.form-radio {
   flex-wrap: wrap;
   gap: 1em;
 }
+button,
 input.form-submit,
 button.form-submit,
 .form-actions input,
@@ -113,7 +114,8 @@ input.form-submit:focus-visible,
 .form-actions input:focus-visible {
   outline: 2px solid var(--bedrock-focus-halo-color);
 }
-input.button-primary {
+input.button-primary,
+button.button-primary {
   background: var(--bedrock-link-color);
   border-color: var(--bedrock-link-color);
   color: var(--bedrock-bg-color-highlight);
@@ -127,6 +129,7 @@ input.form-submit:hover {
 }
 a.form-delete,
 a.danger,
+button.button-danger,
 input.button-primary.button-danger {
   color: var(--bedrock-danger-color);
   background: var(--bedrock-bg-color);
