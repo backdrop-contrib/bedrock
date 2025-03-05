@@ -516,6 +516,7 @@ body .tox .tox-textfield, .tox .tox-toolbar-textfield {
 .ui-widget-header button,
 .ui-dialog-buttonset button {
   background: var(--bedrock-bg-color);
+  color: var(--bedrock-text-color);
 }
 .ui-state-hover,
 .ui-widget-content .ui-state-hover,
