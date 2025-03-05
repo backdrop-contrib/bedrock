@@ -415,6 +415,13 @@ html.js .block-content ul.menu-dropdown .has-children > a {
 /**
  * Dialogs.
  */
+.ui-widget,
+.tox.tox-tinymce-aux,
+.tox.tox-tinymce-aux .tox-selectfield select,
+.tox button.tox-button,
+.tox .tox-listboxfield button.tox-listbox--select {
+  font: var(--bedrock-font);
+}
 .ui-widget.ui-widget-content {
   border-color: var(--bedrock-border-color);
 }
@@ -478,6 +485,23 @@ body .tox .tox-textfield, .tox .tox-toolbar-textfield {
 .tox .tox-form .tox-label,
 .tox .tox-form .tox-toolbar-label {
   color: var(--bedrock-text-color);
+}
+.editor-link-dialog {
+  max-width: min(98vw, 32em);
+}
+.editor-link-dialog .form-item .editor-image-toggle,
+.editor-image-dialog .form-item .editor-image-toggle {
+  margin-bottom: .8em;
+  padding-bottom: .2em;
+  border-color: var(--bedrock-border-color);
+}
+.editor-link-dialog .form-type-managed-file {
+  background: none;
+  padding: 0;
+  border: none;
+}
+.editor-image-dialog .image-form-wrapper {
+  width: 22em;
 }
 .ui-dialog .ui-dialog-titlebar,
 .ui-dialog .ui-dialog-buttonpane {
