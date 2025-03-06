@@ -95,7 +95,7 @@ input.form-radio {
   flex-wrap: wrap;
   gap: 1em;
 }
-button[class*="button"],
+button.button,
 input.form-submit,
 button.form-submit,
 .form-actions input,
