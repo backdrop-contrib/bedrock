@@ -130,7 +130,7 @@ input.form-submit:hover {
 a.form-delete,
 a.danger,
 button.button-danger,
-input.button-primary.button-danger {
+input.button-danger {
   color: var(--bedrock-danger-color);
   background: var(--bedrock-bg-color);
   border-color: var(--bedrock-danger-color);
