@@ -600,7 +600,7 @@ article.comment footer {
 }
 /** Only if Bedrock is the default theme, not a base theme */
 .bedrock-no-subtheme .view-promoted-cards .views-view-grid {
-  gap: 1.5em;
+  gap: var(--views-responsive-grid--layout-gap, 1.5em);
   margin-top: 1.5em;
   margin-bottom: 1.5em;
 }
