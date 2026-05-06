@@ -48,6 +48,7 @@ function bedrock_preprocess_page(&$variables) {
   // Icon API.
   backdrop_add_icons(array(
     'arrows-out-cardinal',
+    'arrows-out-line-vertical',
     'question-fill',
     'x',
   ));
@@ -77,7 +78,7 @@ function bedrock_preprocess_node(&$variables) {
     $scheduled = $variables['scheduled'];
     $icon = '';
     if (function_exists('icon')) {
-      $icon_name = ($scheduled) ? 'clock-clockwise': 'info';
+      $icon_name = ($scheduled) ? 'clock-clockwise' : 'info';
       $icon = icon($icon_name, array(
         'attributes' => array(
           'width' => '28',
@@ -167,7 +168,9 @@ function bedrock_comment_view_alter(&$build) {
 function bedrock_preprocess_comment(&$variables) {
   $comment = $variables['comment'];
   $uri = $comment->uri();
-  $uri['options'] += array('attributes' => array('class' => array('permalink'), 'rel' => 'bookmark'));
+  $uri['options'] += array(
+    'attributes' => array('class' => array('permalink'), 'rel' => 'bookmark'),
+  );
   $icon = icon('link', array(
     'alt' => t('Permalink'),
   ));
