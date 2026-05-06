@@ -321,6 +321,9 @@ a.tabledrag-handle .handle,
   mask-repeat: no-repeat;
   mask-position: center;
 }
+a.tabledrag-handle.tabledrag-handle-y .handle {
+  mask-image: var(--icon-arrows-out-line-vertical);
+}
 tr.drag a.tabledrag-handle .handle {
   background-color: var(--bedrock-link-color);
 }
