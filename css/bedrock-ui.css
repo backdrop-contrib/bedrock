@@ -626,6 +626,16 @@ body .tox .tox-textfield, .tox .tox-toolbar-textfield {
   white-space: nowrap;
   text-overflow: ellipsis;
 }
+.view-content .file-library-item {
+  background-color: var(--bedrock-bg-color-highlight);
+}
+.file-library-item.file-library-selected {
+  box-shadow: 0 0 0 2px var(--bedrock-focus-halo-color);
+}
+.icon-browser-filters-wrapper {
+  border: 1px solid var(--bedrock-border-color);
+  background-color: var(--bedrock-bg-color-highlight);
+}
 .progress .bar {
   background: var(--bedrock-bg-color-highlight);
 }
