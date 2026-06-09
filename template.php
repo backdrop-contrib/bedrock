@@ -64,9 +64,14 @@ function bedrock_preprocess_page(&$variables) {
  * Implements hook_preprocess_HOOK().
  */
 function bedrock_preprocess_layout(&$variables) {
-  if (isset($variables['layout_info']['flexible'])) {
+  // Before core 1.34.0.
+  if (!empty($variables['layout_info']) && isset($variables['layout_info']['flexible'])) {
     // Add CSS class to layout based on flexible template machine name.
     $variables['classes'][] = backdrop_clean_css_identifier('layout-' . $variables['layout_info']['name']);
+  }
+  // As of core 1.34.0.
+  elseif (!empty($variables['layout_template_info']) && isset($variables['layout_template_info']['flexible'])) {
+    $variables['classes'][] = backdrop_clean_css_identifier('layout-' . $variables['layout_template_info']['name']);
   }
 }
 
