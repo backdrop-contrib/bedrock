@@ -779,3 +779,20 @@ div.node-preview-banner-form {
 .user-login-block .form-text {
   width: 20em;
 }
+.system-status-report .status-title,
+.system-status-report .status-description {
+  color: inherit;
+}
+.field-type-image td,
+.field-multiple-table td {
+  max-width: 22em;
+}
+@media (min-width: 74em) {
+  .field-type-image td,
+  .field-multiple-table td {
+    max-width: 40em;
+  }
+}
+.form-managed-file .form-file {
+  margin-bottom: .5em;
+}
