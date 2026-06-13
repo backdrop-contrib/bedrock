@@ -796,3 +796,12 @@ div.node-preview-banner-form {
 .form-managed-file .form-file {
   margin-bottom: .5em;
 }
+table div.admin-requirements,
+table div.admin-required {
+  color: inherit;
+  opacity: .8;
+  margin-top: .5em;
+}
+.requirements-toggle .arrow.close {
+  border-bottom-color: inherit;
+}
