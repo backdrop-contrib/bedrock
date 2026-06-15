@@ -805,3 +805,17 @@ table div.admin-required {
 .requirements-toggle .arrow.close {
   border-bottom-color: inherit;
 }
+.field-ui-view-modes tr.header td {
+  background-color: var(--bedrock-bg-color-secondary);
+}
+.field-ui-view-modes tr.uses-default td,
+.field-ui-view-modes tr.uses-default td {
+  color: inherit;
+}
+.field-ui-view-modes tr.uses-default td:not(:last-child),
+.views-list tr.disabled td:not(:last-child) {
+  opacity: .7;
+}
+.dropbutton button span {
+  color: var(--bedrock-text-color);
+}
