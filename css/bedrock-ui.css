@@ -819,3 +819,20 @@ table div.admin-required {
 .dropbutton button span {
   color: var(--bedrock-text-color);
 }
+#user-admin-permissions .table-filter {
+  background-color: var(--bedrock-bg-color-highlight);
+  border-color: var(--bedrock-border-color);
+}
+#permissions td.module {
+  background: var(--bedrock-bg-color-secondary);
+}
+body.admin-page .l-content {
+  padding-bottom: 3em;
+}
+.installer-browser .install-disabled,
+.installer-browser .project-extra {
+  color: var(--bedrock-text-color);
+}
+.installer-browser .project-description {
+  margin: 1.5rem 0;
+}
