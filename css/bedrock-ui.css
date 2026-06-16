@@ -644,7 +644,7 @@ body .tox .tox-textfield, .tox .tox-toolbar-textfield {
 }
 .admin-panel {
   padding: .5em 1em;
-  background: #fff;
+  background: var(--bedrock-bg-color-highlight);
   margin-bottom: 1em;
   border: 1px solid var(--bedrock-border-color);
 }
@@ -835,4 +835,7 @@ body.admin-page .l-content {
 }
 .installer-browser .project-description {
   margin: 1.5rem 0;
+}
+dl.admin-list dt:not(:first-child) {
+  margin-top: 1rem;
 }
